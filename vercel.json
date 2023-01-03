@@ -1,0 +1,19 @@
+{
+  "name": server
+  "version": 1,
+  "builds": [
+    {
+      "src": "*.py",
+      "use": "@vercel/python-builder"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server/wsgi.py"
+    }
+  ],
+  "env": {
+    "DJANGO_SETTINGS_MODULE": "server.settings"
+  }
+}
