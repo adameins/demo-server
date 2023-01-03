@@ -1,16 +1,14 @@
 {
-  "name": "demo-server"
-  "version": 1,
   "builds": [
     {
-      "src": "*.py",
-      "use": "@vercel/python-builder"
+      "src": "vercel_app/wsgi.py",
+      "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "server/wsgi.py"
+      "dest": "vercel_app/wsgi.py"
     }
   ],
   "env": {
